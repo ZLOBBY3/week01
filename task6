@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main()
+{
+    int price, usb_ports, ram;
+    bool has_ssd = true;
+    std::cin >> price >> usb_ports >> ram >> std::boolalpha >> has_ssd;
+
+    bool isWillBuy = ((price >= 1000 && price <= 1500) && usb_ports >= 3 && ram >= 8 && has_ssd
+        || (price <= 800) && (ram < 8 || !has_ssd));
+
+    if (isWillBuy)
+    {
+        std::cout << "Traycho will buy laptop!" << std::endl;
+    }
+    else
+    {
+        std::cout << "Traycho will not buy a laptop!" << std::endl;
+    }
+}
