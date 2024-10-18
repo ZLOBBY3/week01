@@ -1,0 +1,28 @@
+
+#include <iostream>
+
+int main()
+{
+    int tomatoes, peppers, carrots, olives, potatoes, seasonings;
+    bool friendWillHelp;
+
+    std::cin >> tomatoes >> peppers >> carrots >> olives >> potatoes >> seasonings;
+    std::cin >> std::boolalpha >> friendWillHelp;
+
+    bool can_make_salad = (tomatoes >= 1 && peppers >= 2 && carrots >= 4 && olives >= 3 && potatoes >= 3 && seasonings >= 150);
+
+    bool can_make_soup = (tomatoes >= 2 && peppers >= 3 && carrots >= 5 && olives >= 6 && potatoes >= 10 && seasonings >= 200);
+
+    bool can_make_stew = (tomatoes >= 5 && peppers >= 6 && carrots >= 12 && olives >= 7 && potatoes >= 12 && seasonings >= 300);
+
+    bool willEat = can_make_salad || (can_make_soup && friendWillHelp) || (can_make_stew && friendWillHelp);
+
+    if (willEat)
+    {
+        std::cout << "Traycho will eat!" << std::endl;
+    }
+    else
+    {
+        std::cout << "Traycho does not have the necessary products! " << std::endl;
+    }
+}
