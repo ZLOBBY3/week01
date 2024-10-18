@@ -1,0 +1,43 @@
+#include <iostream>
+
+int main()
+{
+    int a, b;
+    char operation;
+    double result = 0;
+
+    std::cout << "Type a" << std::endl;
+    std::cin >> a;
+    std::cout << "Type operation" << std::endl;
+    std::cin >> operation;
+    std::cout << "Type b" << std::endl;
+    std::cin >> b;
+
+
+    switch (operation)
+    {
+
+    case '+':
+       result = a + b;
+    break;
+
+    case '-':
+        result = a - b;
+    break;
+
+    case '*':
+        result = a * b;
+    break;
+
+    case '/':
+        result = a / b;
+    break;
+
+    default:
+        std::cout << "Type valid operation" << std::endl;
+        break;
+    }
+
+    std::cout << result << std::endl;
+}
+
