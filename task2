@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main()
+{
+    char ch;
+    std::cin >> ch;
+
+    if (ch >= 'a' && ch <= 'z')
+    {
+        char upperChar = ch - 32;
+        std::cout << "The upper case character corresponding to is " << upperChar << std::endl;
+    }
+    else if (ch >= 'A' && ch <= 'Z')
+    {
+        char lowerChar = ch + 32;
+        std::cout << "The upper case character corresponding to is" << lowerChar << std::endl;
+    }
+    else
+    {
+        std::cout << "Type valid char!" << std::endl;
+    }
+}
